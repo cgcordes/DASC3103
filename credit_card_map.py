@@ -6,5 +6,5 @@ for index, row in sys.stdin.iterrows():
     y = row[24]
     for i in range(6, 12):
         value_at_xi = row[i]
-        output = "%s\t%s" % (f"{ID},{value_at_xi},{y}","")
+        output = "%s\t%s" % (ID, value_at_xi)
         print(output)
