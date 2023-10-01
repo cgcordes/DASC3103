@@ -1,11 +1,9 @@
 #!/usr/bin/env python 3
 
 import sys
-import pandas as pd
-df = pd.read_csv(sys.stdin)
-for index, row in df.iterrows():
-    ID = row['ID']
-    y = row['IS_DEFAULT']
+for index, row in sys.stdin.iterrows():
+    ID = row[0]
+    y = row[24]
     for i in range(6, 12):
         value_at_xi = row[i]
         output = "%s\t%s" % (f"{ID},{value_at_xi},{y}","")
