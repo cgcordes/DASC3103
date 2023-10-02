@@ -1,6 +1,8 @@
 #!/usr/bin/env python 3
 
 import sys
+
+(last_key, total_sum) = (None, 0)
 for line in sys.stdin:
     (key, value) = line.strip().split("\t")
     value = int(value) 
